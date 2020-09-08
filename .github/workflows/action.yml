@@ -1,0 +1,14 @@
+# This is a basic workflow to help you get started with Actions
+
+name: 'Rusty Hog GH Action Scanner'
+description: 'Runs the Rusty Hog Scanner against any commit using GH Actions and Docker'
+
+outputs:
+  jsonresult:
+    description: 'The JSON output of Rusty Hog'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ github.sha }}
