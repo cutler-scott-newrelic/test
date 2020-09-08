@@ -2,6 +2,7 @@
 
 name: 'Rusty Hog GH Action Scanner'
 description: 'Runs the Rusty Hog Scanner against any commit using GH Actions and Docker'
+on: [push]
 
 outputs:
   jsonresult:
